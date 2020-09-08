@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>SAC - JD Informática</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="body">
+
+    <div class="top">
+        <p><img src="logo.png" alt="logo"></p>
+    </div>
+    <form action="enviar_email.php" class="formulario" method="post"> 
+        
+
+        <p>Ajude a melhorar nossa qualidade de serviços e produtos. <br> Envie seu feedback!</p>
+        
+        <fieldset class="info">
+
+            <legend class="tit">
+                Informações Pessoais :
+            </legend>
+
+            <div class="field">
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome*" required>
+            </div>
+            
+            <div class="field">
+                <label for="telefone">Seu Telefone:</label>
+                <input type="text" id="telefone" name="telefone" placeholder="Digite seu Telefone">
+            </div>
+    
+            <div class="field radiobox">
+                <span>Este número é Whatsapp ?</span>
+                <input type="radio" name="wapp" id="sim" value="sim" checked><label for="sim">Sim</label>
+                <input type="radio" name="wapp" id="nao" value="nao"><label for="nao">Não</label>
+            </div>
+     
+            <div class="field">
+                <label for="email">Seu E-Mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu E-Mail*" required>
+            </div>    
+    
+            <div class="field radiobox">
+                <span>Deseja receber nossas novidades?</span>
+                <input type="radio" name="novidades" id="sim" value="sim" checked><label for="sim">Sim</label>
+                <input type="radio" name="novidades" id="nao" value="nao"><label for="nao">Não</label>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="sobre">
+
+            <legend class="tit">
+                Sobre a Loja :
+            </legend>
+
+            <div class="field">
+               <p>Como realizou a compra ?</p> 
+                <select name="compra">
+                    <option value="loja" selected>Loja Física
+                    <option value="wapp">Whatsapp
+                    <option value="telef">Telefone
+                    <option value="nao">Não Comprei
+                    <option value="outros">Outros
+                </select>         
+            </div>
+
+            <div class="field">
+                <label for="nome">Se souber, Qual o nome do atendente ?</label>
+                <input type="text" id="atendente" placeholder="Arthur, Felipe ..." />
+            </div>
+
+            <div class="field">
+               <p>Se fizer sentido, O quanto ficou satisfeito com os serviços ?</p> 
+                <select name="satisfacao">
+                    <option value="vazio" selected>
+                    <option value="max">Muito Satisfeito
+                    <option value="menos">Satisfeito
+                    <option value="pouco">Pouco Satisfeito
+                    <option value="nada">Péssimo
+                </select>         
+            </div>
+
+            <div class="field">
+                <label for="mensagem">Sua mensagem:</label>
+                <textarea name="mensagem" id="mensagem" placeholder="Mensagem*" required></textarea>
+            </div>    
+
+        </fieldset>
+       
+        <input type="submit" name="acao" value="Enviar">
+    </form>
+</body>
+</html>
